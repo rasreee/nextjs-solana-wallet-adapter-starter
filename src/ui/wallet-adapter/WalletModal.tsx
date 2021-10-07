@@ -12,7 +12,7 @@ import React, {
 } from 'react';
 import { createPortal } from 'react-dom';
 
-import {Button} from './Button';
+import {Button} from './WalletAdapterButton';
 import {Collapse} from './Collapse';
 import {useWalletModal} from './useWalletModal';
 import {WalletListItem} from './WalletListItem';
@@ -169,7 +169,7 @@ export const WalletModal: FC<WalletModalProps> = ({
                     ))}
                   </ul>
                 </Collapse>
-                <Button
+                <WalletAdapterButton
                   aria-controls="ras-wallet-adapter-modal-collapse"
                   aria-expanded={expanded}
                   className={`ras-wallet-adapter-modal-collapse-button ${
@@ -183,7 +183,7 @@ export const WalletModal: FC<WalletModalProps> = ({
                   onClick={handleCollapseClick}
                 >
                   {expanded ? 'Less' : 'More'} options
-                </Button>
+                </WalletAdapterButton>
               </>
             ) : null}</div>
         <div className="ras-wallet-adapter-modal-overlay" onMouseDown={handleClose} />

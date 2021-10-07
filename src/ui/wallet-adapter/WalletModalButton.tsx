@@ -1,8 +1,8 @@
 import React, { FC, MouseEvent, useCallback } from 'react';
-import { Button, ButtonProps } from './Button';
+import { WalletAdapterButton, WalletAdapterButtonProps } from './WalletAdapterButton';
 import { useWalletModal } from './useWalletModal';
 
-export const WalletModalButton: FC<ButtonProps> = ({
+export const WalletModalButton: FC<WalletAdapterButtonProps> = ({
   children = 'Select Wallet',
   onClick,
   ...props
@@ -18,8 +18,12 @@ export const WalletModalButton: FC<ButtonProps> = ({
   );
 
   return (
-    <Button className="ras-wallet-adapter-button-trigger" onClick={handleClick} {...props}>
+    <WalletAdapterButton
+      className="ras-wallet-adapter-button-trigger"
+      onClick={handleClick}
+      {...props}
+    >
       {children}
-    </Button>
+    </WalletAdapterButton>
   );
 };

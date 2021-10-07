@@ -1,12 +1,12 @@
 import { useWallet } from '@solana/wallet-adapter-react';
 import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Button, ButtonProps } from './Button';
+import { WalletAdapterButton, WalletAdapterButtonProps } from './WalletAdapterButton';
 import { useWalletModal } from './useWalletModal';
 import { WalletConnectButton } from './WalletConnectButton';
 import { WalletIcon } from './WalletIcon';
 import { WalletModalButton } from './WalletModalButton';
 
-export const WalletMultiButton: FC<ButtonProps> = ({ children, ...props }) => {
+export const WalletMultiButton: FC<WalletAdapterButtonProps> = ({ children, ...props }) => {
   const { publicKey, wallet, disconnect } = useWallet();
   const { setVisible } = useWalletModal();
   const [copied, setCopied] = useState(false);
@@ -61,7 +61,7 @@ export const WalletMultiButton: FC<ButtonProps> = ({ children, ...props }) => {
 
   return (
     <div className="ras-wallet-adapter-dropdown">
-      <Button
+      <WalletAdapterButton
         aria-expanded={active}
         className="ras-wallet-adapter-button-trigger"
         style={{ pointerEvents: active ? 'none' : 'auto', ...props.style }}
@@ -70,7 +70,7 @@ export const WalletMultiButton: FC<ButtonProps> = ({ children, ...props }) => {
         {...props}
       >
         {content}
-      </Button>
+      </WalletAdapterButton>
       <ul
         aria-label="dropdown-list"
         className={`ras-wallet-adapter-dropdown-list ${

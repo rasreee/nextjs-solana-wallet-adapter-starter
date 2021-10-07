@@ -1,6 +1,6 @@
 import React, { CSSProperties, FC, MouseEvent, ReactElement } from 'react';
 
-export interface ButtonProps {
+export interface WalletAdapterButtonProps {
   className?: string;
   disabled?: boolean;
   endIcon?: ReactElement;
@@ -10,7 +10,7 @@ export interface ButtonProps {
   tabIndex?: number;
 }
 
-export const Button: FC<ButtonProps> = (props) => {
+export const WalletAdapterButton: FC<WalletAdapterButtonProps> = (props) => {
   const justifyContent = props.endIcon || props.startIcon ? 'space-between' : 'center';
 
   return (
