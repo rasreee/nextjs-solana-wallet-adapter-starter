@@ -2,8 +2,9 @@ import type { AppProps } from 'next/app';
 import dynamic from 'next/dynamic';
 import { ReactElement } from 'react';
 
-// Use require instead of import, and order matters
+
 require('../styles/globals.css');
+require('../wallet-adapter-react-ui/styles.css')
 
 const WalletConnectionProvider = dynamic(() => import('../components/WalletConnectionProvider'), {
     ssr: false,

@@ -1,10 +1,10 @@
 import {useWallet} from '@solana/wallet-adapter-react';
-import {WalletConnectButton, WalletMultiButton} from '@rasreee/solana-wallet-adapter-react-ui';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
 import styles from '../styles/Home.module.css';
+import {WalletMultiButton} from '../wallet-adapter-react-ui';
 
 const Home: NextPage = () => {
     const {wallet} = useWallet()
@@ -21,6 +21,7 @@ const Home: NextPage = () => {
                     {wallet?.adapter()?.publicKey?.toBase58() ?? 'Wallet not connected.'}
                 </h1>
                 <WalletMultiButton />
+
             </main>
 
         </div>
