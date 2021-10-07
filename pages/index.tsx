@@ -1,13 +1,12 @@
 import {useWallet} from '@solana/wallet-adapter-react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import React from 'react';
 import styles from '../styles/Home.module.css';
-import {WalletMultiButton} from '../wallet-adapter-react-ui';
+import {WalletDisconnectButton, WalletMultiButton} from '../wallet-adapter-react-ui';
 
 const Home: NextPage = () => {
-    const {wallet} = useWallet()
+    const {wallet , connected} = useWallet()
     return (
         <div className={styles.container}>
             <Head>
@@ -21,6 +20,7 @@ const Home: NextPage = () => {
                     {wallet?.adapter()?.publicKey?.toBase58() ?? 'Wallet not connected.'}
                 </h1>
                 <WalletMultiButton />
+                {connected && <WalletDisconnectButton />}
 
             </main>
 

@@ -16,6 +16,7 @@
     padding: 1.5em 1em;
     z-index: 999999;
     box-sizing: border-box;
+    transition: opacity linear 150ms;
 }
 
 .ras-wallet-adapter-modal > .ras-wallet-adapter-modal-fade-in {
@@ -80,7 +81,6 @@
 .ras-wallet-adapter-modal-list li:not(:first-of-type) {
     margin-top: 12px;
 }
-
 
 .ras-wallet-adapter-button {
     background-color: #404144;

@@ -125,7 +125,7 @@ export const WalletModal: FC<WalletModalProps> = ({
       <div
         aria-labelledby="ras-wallet-adapter-modal-title"
         aria-modal="true"
-        className={`ras-wallet-adapter-modal`}
+        className={`ras-wallet-adapter-modal ${fadeIn && 'ras-wallet-adapter-modal-fade-in'} ${className}`}
         ref={ref}
         role="dialog"
       >
