@@ -1,24 +1,7 @@
 {
-    "name": "@solana/wallet-adapter-nextjs-starter",
-    "version": "0.4.2",
-    "author": "Solana Maintainers <maintainers@solana.foundation>",
-    "repository": "https://github.com/solana-labs/wallet-adapter",
-    "license": "Apache-2.0",
-    "files": [
-        "components",
-        "pages",
-        "public",
-        "styles",
-        ".eslintrc.json",
-        "next.config.js",
-        "next-env.d.ts",
-        "package.json",
-        "README.md",
-        "tsconfig.json"
-    ],
-    "publishConfig": {
-        "access": "public"
-    },
+    "name": "nextjs-solana-wallet-adapter-starter",
+    "author": "Lesley Chang <lesley.hanna98@gmail.com>",
+    "repository": "https://github.com/rasreee/nextjs-solana-wallet-adapter-starter",
     "scripts": {
         "clean": "shx rm -rf .next && rm -rf node_modules yarn.lock",
         "dev": "next dev",
