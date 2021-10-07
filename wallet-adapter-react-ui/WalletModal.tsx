@@ -129,7 +129,7 @@ export const WalletModal: FC<WalletModalProps> = ({
         ref={ref}
         role="dialog"
       >
-            {logo && (
+            <div className="ras-wallet-adapter-modal-wrapper">{logo && (
               <div className="ras-wallet-adapter-modal-logo-wrapper">
                 {typeof logo === 'string' ? (
                   <img alt="logo" className="ras-wallet-adapter-modal-logo" src={logo} />
@@ -185,7 +185,7 @@ export const WalletModal: FC<WalletModalProps> = ({
                   {expanded ? 'Less' : 'More'} options
                 </Button>
               </>
-            ) : null}
+            ) : null}</div>
         <div className="ras-wallet-adapter-modal-overlay" onMouseDown={handleClose} />
       </div>,
       portal
