@@ -18,7 +18,7 @@ export const WalletModalButton: FC<ButtonProps> = ({
   );
 
   return (
-    <Button className="wallet-adapter-button-trigger" onClick={handleClick} {...props}>
+    <Button className="ras-wallet-adapter-button-trigger" onClick={handleClick} {...props}>
       {children}
     </Button>
   );

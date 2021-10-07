@@ -15,15 +15,15 @@ export const Button: FC<ButtonProps> = (props) => {
 
   return (
     <button
-      className={`wallet-adapter-button ${props.className || ''}`}
+      className={`ras-wallet-adapter-button ${props.className || ''}`}
       disabled={props.disabled}
       onClick={props.onClick}
       style={{ justifyContent, ...props.style }}
       tabIndex={props.tabIndex || 0}
     >
-      {props.startIcon && <i className="wallet-adapter-button-start-icon">{props.startIcon}</i>}
+      {props.startIcon && <i className="ras-wallet-adapter-button-start-icon">{props.startIcon}</i>}
       {props.children}
-      {props.endIcon && <i className="wallet-adapter-button-end-icon">{props.endIcon}</i>}
+      {props.endIcon && <i className="ras-wallet-adapter-button-end-icon">{props.endIcon}</i>}
     </button>
   );
 };

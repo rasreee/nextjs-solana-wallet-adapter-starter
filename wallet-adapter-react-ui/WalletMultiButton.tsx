@@ -60,10 +60,10 @@ export const WalletMultiButton: FC<ButtonProps> = ({ children, ...props }) => {
   if (!base58) return <WalletConnectButton {...props}>{children}</WalletConnectButton>;
 
   return (
-    <div className="wallet-adapter-dropdown">
+    <div className="ras-wallet-adapter-dropdown">
       <Button
         aria-expanded={active}
-        className="wallet-adapter-button-trigger"
+        className="ras-wallet-adapter-button-trigger"
         style={{ pointerEvents: active ? 'none' : 'auto', ...props.style }}
         onClick={openDropdown}
         startIcon={<WalletIcon wallet={wallet} />}
@@ -73,19 +73,19 @@ export const WalletMultiButton: FC<ButtonProps> = ({ children, ...props }) => {
       </Button>
       <ul
         aria-label="dropdown-list"
-        className={`wallet-adapter-dropdown-list ${
+        className={`ras-wallet-adapter-dropdown-list ${
           active && 'wallet-adapter-dropdown-list-active'
         }`}
         ref={ref}
         role="menu"
       >
-        <li onClick={copyAddress} className="wallet-adapter-dropdown-list-item" role="menuitem">
+        <li onClick={copyAddress} className="ras-wallet-adapter-dropdown-list-item" role="menuitem">
           {copied ? 'Copied' : 'Copy address'}
         </li>
-        <li onClick={openModal} className="wallet-adapter-dropdown-list-item" role="menuitem">
+        <li onClick={openModal} className="ras-wallet-adapter-dropdown-list-item" role="menuitem">
           Connect a different wallet
         </li>
-        <li onClick={disconnect} className="wallet-adapter-dropdown-list-item" role="menuitem">
+        <li onClick={disconnect} className="ras-wallet-adapter-dropdown-list-item" role="menuitem">
           Disconnect
         </li>
       </ul>

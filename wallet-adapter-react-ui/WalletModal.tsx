@@ -123,31 +123,30 @@ export const WalletModal: FC<WalletModalProps> = ({
     portal &&
     createPortal(
       <div
-        aria-labelledby="wallet-adapter-modal-title"
+        aria-labelledby="ras-wallet-adapter-modal-title"
         aria-modal="true"
         className={`ras-wallet-adapter-modal`}
         ref={ref}
         role="dialog"
       >
-        <div className="wallet-adapter-modal-wrapper">
             {logo && (
-              <div className="wallet-adapter-modal-logo-wrapper">
+              <div className="ras-wallet-adapter-modal-logo-wrapper">
                 {typeof logo === 'string' ? (
-                  <img alt="logo" className="wallet-adapter-modal-logo" src={logo} />
+                  <img alt="logo" className="ras-wallet-adapter-modal-logo" src={logo} />
                 ) : (
                   logo
                 )}
               </div>
             )}
-            <h1 className="wallet-adapter-modal-title" id="wallet-adapter-modal-title">
+            <h1 className="ras-wallet-adapter-modal-title" id="ras-wallet-adapter-modal-title">
               Connect Wallet
             </h1>
-            <button onClick={handleClose} className="wallet-adapter-modal-button-close">
+            <button onClick={handleClose} className="ras-wallet-adapter-modal-button-close">
               <svg width="14" height="14">
                 <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z" />
               </svg>
             </button>
-            <ul className="wallet-adapter-modal-list">
+            <ul className="ras-wallet-adapter-modal-list">
               {featured.map((wallet) => (
                 <WalletListItem
                   key={wallet.name}
@@ -158,8 +157,8 @@ export const WalletModal: FC<WalletModalProps> = ({
             </ul>
             {more.length ? (
               <>
-                <Collapse expanded={expanded} id="wallet-adapter-modal-collapse">
-                  <ul className="wallet-adapter-modal-list">
+                <Collapse expanded={expanded} id="ras-wallet-adapter-modal-collapse">
+                  <ul className="ras-wallet-adapter-modal-list">
                     {more.map((wallet) => (
                       <WalletListItem
                         key={wallet.name}
@@ -171,9 +170,9 @@ export const WalletModal: FC<WalletModalProps> = ({
                   </ul>
                 </Collapse>
                 <Button
-                  aria-controls="wallet-adapter-modal-collapse"
+                  aria-controls="ras-wallet-adapter-modal-collapse"
                   aria-expanded={expanded}
-                  className={`wallet-adapter-modal-collapse-button ${
+                  className={`ras-wallet-adapter-modal-collapse-button ${
                     expanded && 'wallet-adapter-modal-collapse-button-active'
                   }`}
                   endIcon={
@@ -187,8 +186,7 @@ export const WalletModal: FC<WalletModalProps> = ({
                 </Button>
               </>
             ) : null}
-        </div>
-        <div className="wallet-adapter-modal-overlay" onMouseDown={handleClose} />
+        <div className="ras-wallet-adapter-modal-overlay" onMouseDown={handleClose} />
       </div>,
       portal
     )

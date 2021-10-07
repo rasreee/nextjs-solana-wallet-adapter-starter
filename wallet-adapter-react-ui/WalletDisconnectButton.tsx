@@ -28,7 +28,7 @@ export const WalletDisconnectButton: FC<ButtonProps> = ({
 
   return (
     <Button
-      className="wallet-adapter-button-trigger"
+      className="ras-wallet-adapter-button-trigger"
       disabled={disabled || !wallet}
       startIcon={wallet ? <WalletIcon wallet={wallet} /> : undefined}
       onClick={handleClick}
